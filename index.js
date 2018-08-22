@@ -68,4 +68,7 @@ async function getGoing(){
   app.listen(NGROK_PORT);
 }
 
-getGoing();
+getGoing()
+.catch(e=>{
+  console.error(e);
+});
