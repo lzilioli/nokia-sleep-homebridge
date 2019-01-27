@@ -46,19 +46,23 @@ async function getGoing(){
       json: false,
       url: process.env.HB_WEBHOOK_URL,
     };
+    let accessory = req.query.accessory || process.env.ACCESSORY;
+    console.log(req.query.accessory, accessory)
     switch(req.query.state){
       case 'in':
-      debug('user is in bed');
+      case 'ARRIVING':
+      debug(`opening sensor: ${accessory}`);
       options.qs = {
         state: false,
-        accessoryId: process.env.ACCESSORY
+        accessoryId: accessory
       };
       break;
       case 'out':
-      debug('user is out of bed');
+      case 'LEAVING':
+      debug(`closing sensor: ${accessory}`);
       options.qs = {
         state: true,
-        accessoryId: process.env.ACCESSORY
+        accessoryId: accessory
       };
       break;
     }
