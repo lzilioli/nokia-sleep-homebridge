@@ -1,5 +1,15 @@
 # nokia-sleep-homebridge
 
+```
+2020-07-25 I am archiving this repo since I no longer use or maintain this functionality, and its dependencies have grown out of date.
+
+For a great replacement, I recommend PushCut's automation server feature. 
+
+PushCut has saved me a ton of time and eliminated the need for me to create little bridge modules like this, since I can do it all with an iOS device + shortcuts now.
+
+https://www.pushcut.io
+```
+
 In order to run this app:
 
 - Install [node.js](https://nodejs.org/en/).
